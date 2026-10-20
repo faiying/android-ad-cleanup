@@ -45,3 +45,7 @@ Hermes 用户：把本文件夹复制到 `<HERMES_HOME>/skills/` 下即可。
 ## 许可
 
 MIT
+
+## 作者
+
+**faiying** — [GitHub](https://github.com/faiying) · 更多技能见 [skills.sh 主页](https://www.skills.sh/faiying)

@@ -40,3 +40,7 @@ LiTiaotiao (李跳跳) was discontinued in 2023 and is no longer on any app stor
 ## License
 
 MIT
+
+## Author
+
+**faiying** — [GitHub](https://github.com/faiying) · more skills on [skills.sh](https://www.skills.sh/faiying)

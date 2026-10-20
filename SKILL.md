@@ -1,6 +1,9 @@
 ---
 name: android-ad-cleanup
 description: Use when cleaning ads on an Android phone via adb (splash ads, OEM push ads, LiTiaotiao rule import, no root).
+metadata:
+  author: faiying
+  version: "1.1"
 ---
 
 # Android ad cleanup (no root, adb-driven)
