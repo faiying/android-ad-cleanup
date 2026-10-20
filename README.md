@@ -44,3 +44,5 @@ MIT
 ## Author
 
 **faiying** — [GitHub](https://github.com/faiying) · more skills on [skills.sh](https://www.skills.sh/faiying)
+
+Co-authored with [Hermes Agent](https://hermes-agent.nousresearch.com) (Nous Research) 🤝

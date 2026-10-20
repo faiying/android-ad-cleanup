@@ -49,3 +49,5 @@ MIT
 ## 作者
 
 **faiying** — [GitHub](https://github.com/faiying) · 更多技能见 [skills.sh 主页](https://www.skills.sh/faiying)
+
+与 [Hermes Agent](https://hermes-agent.nousresearch.com)（Nous Research）协作完成 🤝
