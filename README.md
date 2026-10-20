@@ -1,5 +1,7 @@
 # android-ad-cleanup
 
+**English** | [中文](README.zh-CN.md)
+
 An [Agent Skill](https://agentskills.io) for cleaning ads on Android phones via adb — **no root required**.
 
 Covers three jobs:
