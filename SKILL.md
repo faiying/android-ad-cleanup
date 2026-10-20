@@ -24,7 +24,14 @@ Cleans splash/launch ads, OEM push ads, and imports LiTiaotiao skip-rules on any
 - Always verify the network still works afterwards: `adb shell ping -c2 www.baidu.com`.
 - Pitfall: shell `ping`/`curl` do NOT go through DoT, so you cannot verify blocking from the shell. The user reporting "splash ads are mostly gone in several apps" is the real evidence.
 
-## Step 3 — Import community rules into LiTiaotiao (hello.litiaotiao.app)
+## Step 3 — Install LiTiaotiao (李跳跳, hello.litiaotiao.app) if missing
+The official app was discontinued in 2023 (takedown notice) and is gone from all Chinese app stores. Install from a verified APK backup instead:
+1. **Bundled copy (recommended)**: this skill ships `assets/litiaotiao-pai2.2.apk` (派大星 2.2, the last official-line build, 3.2 MB). Verify before install: MD5 `ee2f4e1e7d92eb29a8b36267d7a7c79d` (matches the MD5 the original author published in their anti-false-positive notice).
+2. Install over adb: `adb push litiaotiao-pai2.2.apk /sdcard/Download/ && adb shell pm install -r /sdcard/Download/litiaotiao-pai2.2.apk`. The phone may prompt to allow "install from unknown sources" — the user taps through once.
+3. Alternative mirrors (same MD5): `https://github.com/Ayx03/LiTiaoTiao/raw/main/派大星2.2.apk` and other repos — always re-verify the MD5, random APK sites are a classic malware vector.
+4. If the user prefers a maintained successor with scriptable rules, GKD (`fastestapp/gkd`) is the common migration path — out of scope here.
+
+## Step 4 — Import community rules into LiTiaotiao
 1. Rule source: `https://raw.githubusercontent.com/chloeeee72/LiTiaotiao/main/AllRules.json` (community-maintained, 300+ rules; the official repo stopped updating in 2023, and the Snoopy1866 repo is also frozen).
 2. Prerequisite: LiTiaotiao installed with its accessibility service on (`settings get secure enabled_accessibility_services` contains `hello.litiaotiao.app/.LttService`). adb cannot enable accessibility for you — guide the user to Settings → Accessibility.
 3. A ~60 KB rules file cannot be typed via `input text`, and there is no root/clipboard command. Solution: run `python scripts/make_copy_page.py` (downloads rules, generates a local copy-page, serves it over LAN HTTP). Open the printed URL in the phone's browser, tap "复制到剪贴板"; the page turning `COPIED-OK` confirms the clipboard write.
